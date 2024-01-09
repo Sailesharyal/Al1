@@ -1,9 +1,9 @@
-page 50120 "Venuslistpage"
+page 50140 "Venuslistpage"
 {
     Caption = 'Venus List Page';
-    PageType = ListPart;
+    PageType = List;
     ApplicationArea = All;
-    UsageCategory = Lists;
+    UsageCategory = Administration;
     SourceTable = Venue_Table;
 
     layout

@@ -1,4 +1,4 @@
-table 50133 Concert_management
+table 50143 Concert_management
 {
     DataClassification = ToBeClassified;
 
@@ -15,17 +15,34 @@ table 50133 Concert_management
             Caption = 'VENUE';
             DataClassification = ToBeClassified;
             TableRelation = Venue_Table;
+            trigger OnValidate()
+            var
+                Conc: Record Venue_Table;
+            begin
+                if Conc.Get("Venue ") then
+                    Rec.Country := Conc.Country;
+            end;
         }
 
         field(10; "Country"; Code[20])
         {
             Caption = 'Country"';
             DataClassification = ToBeClassified;
+
         }
 
         field(15; "Artist"; Code[20])
         {
             DataClassification = ToBeClassified;
+            TableRelation = Artist;
+            trigger OnValidate()
+            var
+                Art: Record Artist;
+            begin
+                if Art.Get(Artist) then
+                    Rec.Manager_name := Art.Manager_name;
+            end;
+
         }
 
         field(20; "Manager_name"; Code[20])
@@ -36,7 +53,9 @@ table 50133 Concert_management
 
         field(25; "Charge"; Decimal)
         {
-            DataClassification = ToBeClassified;
+
+            FieldClass = FlowField;
+            CalcFormula = lookup(Artist.Charge where(Artist_ID = field(Artist)));
 
         }
 

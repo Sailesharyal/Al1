@@ -1,36 +1,53 @@
-page 50145 "Artistlistpage  "
+page 50143 "Concertlistpage"
 {
+
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = Artist;
+    SourceTable = Concert_management;
+    CardPageId = Concertcardpage;
 
     layout
     {
         area(Content)
         {
-            repeater(Listofartist)
+            repeater(managemntlist)
             {
-                field(Artist_ID; Rec.Artist_ID)
+                field(Concert_ID; Rec.Concert_ID)
                 {
                     ApplicationArea = All;
                 }
 
+                field("Venue "; Rec."Venue ")
+                {
+                    ApplicationArea = All;
+                }
+
+                field(Country; Rec.Country)
+                {
+                    ApplicationArea = All;
+                }
+
+                field(Artist; Rec.Artist)
+                {
+                    ApplicationArea = All;
+                }
                 field(Manager_name; Rec.Manager_name)
                 {
                     ApplicationArea = All;
                 }
-
-
                 field(Charge; Rec.Charge)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Gender; Rec.Gender)
-                {
-                    ApplicationArea = All;
-                }
+
+
+
+
+
+
+
 
 
             }

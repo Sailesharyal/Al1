@@ -1,6 +1,6 @@
 // venue ID, Description, Accomodation Quantity, County 
 
-table 50120 "Venue_Table"
+table 50140 "Venue_Table"
 {
     DataClassification = ToBeClassified;
 
