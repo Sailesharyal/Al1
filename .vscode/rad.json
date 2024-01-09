@@ -1,1 +1,1 @@
-﻿{"Added":[],"Modified":[],"Removed":[]}
+﻿{"Added":[{"Id":50106,"Kind":12,"Name":"Vehiclelistpage","Namespace":""},{"Id":50105,"Kind":10,"Name":"Vehicle_Table1","Namespace":""},{"Id":50105,"Kind":12,"Name":"Vehiclecard","Namespace":""},{"Id":50120,"Kind":10,"Name":"Venue_Table","Namespace":""},{"Id":50120,"Kind":12,"Name":"Venuslistpage","Namespace":""},{"Id":50102,"Kind":12,"Name":"manfacturecardpages","Namespace":""},{"Id":50101,"Kind":10,"Name":"Manafacture_Table","Namespace":""}],"Modified":[],"Removed":[{"Id":50130,"Kind":22,"Name":"MyEnum","Namespace":""}]}
