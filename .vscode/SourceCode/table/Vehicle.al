@@ -13,27 +13,35 @@ table 50105 "Vehicle_Table1"
 
         field(5; "manfacture"; Code[20])
         {
-            Caption = 'Manfacture';
+            // Caption = 'Manfacture';
             DataClassification = ToBeClassified;
             TableRelation = Manafacture_Table;
+            trigger OnValidate()
+            var
+                manu: Record "Manafacture_Table";
+            begin
+                if manu.Get(manfacture) then
+                    //   Vehicle_Type1 := Vehicle_Type;
+                    Vehicle_year := manu.Year;
+            end;
         }
 
 
 
         field(10; "Vehicle_Type1"; Option)
         {
-            Caption = 'Vehicle_Type';
+            // Caption = 'Vehicle_Type';
 
             OptionMembers = "",Car,Bike,Truck;
             FieldClass = FlowField;
-            CalcFormula = lookup("Manafacture_Table".Vehicle_type1 where(Manafacture_ID = field(manfacture)));
+            CalcFormula = lookup("Manafacture_Table".Vehicle_type2 where(Manafacture_ID = field(manfacture)));
 
         }
         //Engine Type Year 
 
         field(15; "engine_type"; Option)
         {
-            Caption = 'engine_type';
+            // Caption = 'engine_type';
             DataClassification = ToBeClassified;
             OptionMembers = "",Electric,hybrid,Petrol;
 
@@ -41,9 +49,17 @@ table 50105 "Vehicle_Table1"
 
         field(20; "Vehicle_year"; Date)
         {
-            Caption = 'Vehicle_year';
+            // Caption = 'Vehicle_year';
             DataClassification = ToBeClassified;
+
+
+
         }
+
+
+
+
+
 
 
 
@@ -57,5 +73,7 @@ table 50105 "Vehicle_Table1"
             Clustered = true;
         }
     }
+
+
 
 }

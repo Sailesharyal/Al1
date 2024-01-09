@@ -33,7 +33,7 @@ page 50106 "Vehiclelistpage"
                     ApplicationArea = All;
                 }
 
-                field(Vehicle_year; Rec.engine_type)
+                field(Vehicle_year; Rec.Vehicle_year)
                 {
                     ApplicationArea = All;
                 }

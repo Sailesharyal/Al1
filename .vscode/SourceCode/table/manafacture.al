@@ -11,7 +11,7 @@ table 50101 "Manafacture_Table"
             DataClassification = ToBeClassified;
         }
 
-        field(5; "Vehicle_type1"; Option)
+        field(5; "Vehicle_type2"; Option)
         {
             Caption = 'Vehicle_type';
             OptionMembers = "",Car,Bike,Truck;

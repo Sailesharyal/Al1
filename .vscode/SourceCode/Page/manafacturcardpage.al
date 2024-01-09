@@ -16,7 +16,7 @@ page 50102 "manfacturecardpages"
                     ApplicationArea = All;
                 }
 
-                field(Vehicle_type1; Rec.Vehicle_type1)
+                field(Vehicle_type2; Rec.Vehicle_type2)
                 {
                     ApplicationArea = All;
                 }

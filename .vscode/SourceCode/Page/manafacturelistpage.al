@@ -19,7 +19,7 @@ page 50101 "manfacturelistpage"
                     ApplicationArea = All;
                 }
 
-                field(Vehicle_type1; Rec.Vehicle_type1)
+                field(Vehicle_type2; Rec.Vehicle_type2)
                 {
                     ApplicationArea = All;
                 }
