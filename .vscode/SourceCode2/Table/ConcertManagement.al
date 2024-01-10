@@ -18,16 +18,20 @@ table 50143 Concert_management
             trigger OnValidate()
             var
                 Conc: Record Venue_Table;
+                country: Record "Country/Region";
             begin
                 if Conc.Get("Venue ") then
-                    Rec.Country := Conc.Country;
+                    if country.get(Conc.Country) then
+                        Rec.Country := country.Name;
             end;
+
         }
 
         field(10; "Country"; Code[20])
         {
             Caption = 'Country"';
             DataClassification = ToBeClassified;
+            Editable = false;
 
         }
 
@@ -47,8 +51,10 @@ table 50143 Concert_management
 
         field(20; "Manager_name"; Code[20])
         {
-            Caption = 'Man"Manager_name"';
+            Caption = 'Manager_name"';
             DataClassification = ToBeClassified;
+
+
         }
 
         field(25; "Charge"; Decimal)

@@ -15,11 +15,13 @@ table 50140 "Venue_Table"
         field(5; "Description"; Text[100])
         {
             DataClassification = ToBeClassified;
+
         }
 
         field(10; "Accomodation_Qty"; Integer)
         {
             DataClassification = ToBeClassified;
+            Editable = true;
         }
 
         field(15; "Country"; Code[20])
