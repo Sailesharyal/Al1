@@ -75,6 +75,26 @@ page 50143 "Concertlistpage"
                         until COncert.Next() = 0;
                 end;
             }
+
+            action(Change_managername)
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    Chaman: Record Concert_management;
+                begin
+                    Chaman.Reset();
+                    Chaman.SetRange("Artist", '2222');
+                    if Chaman.FindFirst() then
+                        repeat
+                            Chaman.Manager_name := 'Sailesh Aryal';
+                            Chaman.Modify();
+                        until chaman.next() = 0;
+
+
+                end;
+            }
         }
     }
 }

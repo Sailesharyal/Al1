@@ -18,11 +18,11 @@ table 50143 Concert_management
             trigger OnValidate()
             var
                 Conc: Record Venue_Table;
-                country: Record "Country/Region";
+                country1: Record "Country/Region";
             begin
                 if Conc.Get("Venue ") then
-                    if country.get(Conc.Country) then
-                        Rec.Country := country.Name;
+                    if country1.get(Conc.Country) then
+                        Rec.Country := country1.Name;
             end;
 
         }
