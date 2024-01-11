@@ -37,6 +37,11 @@ page 50105 "Vehiclecard"
                     ApplicationArea = All;
                 }
 
+                field(Time; Rec.Time)
+                {
+                    ApplicationArea = All;
+                }
+
 
 
 

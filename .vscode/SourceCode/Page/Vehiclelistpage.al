@@ -38,6 +38,11 @@ page 50106 "Vehiclelistpage"
                     ApplicationArea = All;
                 }
 
+                field(Time; Rec.Time)
+                {
+                    ApplicationArea = All;
+                }
+
             }
         }
     }

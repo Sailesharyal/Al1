@@ -56,6 +56,15 @@ table 50105 "Vehicle_Table1"
 
         }
 
+        field(40; "Time"; Duration)
+        {
+            DataClassification = ToBeClassified;
+        }
+
+
+
+
+
 
 
 

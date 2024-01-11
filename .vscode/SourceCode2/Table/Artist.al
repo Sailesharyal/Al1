@@ -4,13 +4,13 @@ table 50141 Artist
 
     fields
     {
-        field(1; "Artist_ID"; Code[20])
+        field(1; "Artist_ID"; Code[2048])
         {
             Caption = 'Artist_ID';
             DataClassification = ToBeClassified;
         }
 
-        field(5; "Manager_name"; Text[100])
+        field(5; "Manager_name"; Text[2048])
         {
             Caption = 'Managername';
             DataClassification = ToBeClassified;
@@ -30,7 +30,10 @@ table 50141 Artist
         }
 
 
+
     }
+
+
 
     keys
     {
