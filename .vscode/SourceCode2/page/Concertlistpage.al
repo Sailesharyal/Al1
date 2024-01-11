@@ -3,7 +3,7 @@ page 50143 "Concertlistpage"
 
     PageType = List;
     ApplicationArea = All;
-    UsageCategory = Administration;
+    UsageCategory = Lists;
     SourceTable = Concert_management;
     CardPageId = Concertcardpage;
 
@@ -70,7 +70,7 @@ page 50143 "Concertlistpage"
                     COncert.SetRange("Venue ", '755');
                     if COncert.FindFirst() then
                         repeat
-                            COncert.Country := 'BN';
+                            COncert.Country := 'Nepal';
                             COncert.Modify();
                         until COncert.Next() = 0;
                 end;
@@ -86,7 +86,7 @@ page 50143 "Concertlistpage"
                 begin
                     Chaman.Reset();
                     Chaman.SetRange("Artist", '2222');
-                    if Chaman.FindFirst() then
+                    if Chaman.FindLast() then
                         repeat
                             Chaman.Manager_name := 'Sailesh Aryal';
                             Chaman.Modify();
@@ -94,6 +94,27 @@ page 50143 "Concertlistpage"
 
 
                 end;
+
+            }
+
+            action("Change rate")
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    Rat: Record Concert_management;
+                begin
+                    Rat.Reset();
+                    Rat.SetRange("Manager_name", 'Sailesh Aryal');
+                    if Rat.FindFirst() then
+                        repeat
+                            Rat.Charge := 1000.00;
+                            Rat.Modify();
+                            Message('%1', Rat.Charge);
+                        until Rat.Next() = 0;
+                end;
+
 
             }
         }
