@@ -41,6 +41,11 @@ page 50143 "Concertlistpage"
                     ApplicationArea = All;
                 }
 
+                field(location; Rec.location)
+                {
+                    ApplicationArea = All;
+                }
+
 
 
 

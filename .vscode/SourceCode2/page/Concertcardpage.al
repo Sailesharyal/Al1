@@ -40,6 +40,12 @@ page 50146 "Concertcardpage"
                     ApplicationArea = All;
                 }
 
+                field(location; Rec.location)
+                {
+                    ApplicationArea = All;
+                }
+
+
 
             }
         }

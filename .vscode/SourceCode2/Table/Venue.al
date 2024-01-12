@@ -30,6 +30,12 @@ table 50140 "Venue_Table"
             TableRelation = "Country/Region";
         }
 
+        field(20; "Location"; Code[20])
+        {
+            DataClassification = ToBeClassified;
+
+        }
+
 
 
 
