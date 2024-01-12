@@ -8,6 +8,8 @@ table 50143 Concert_management
         {
             Caption = 'Concert_ID';
             DataClassification = ToBeClassified;
+
+
         }
 
         field(5; "Venue "; code[20])
@@ -15,15 +17,24 @@ table 50143 Concert_management
             Caption = 'VENUE';
             DataClassification = ToBeClassified;
             TableRelation = Venue_Table;
+
+
             trigger OnValidate()
             var
-                Conc: Record Venue_Table;
-                country1: Record "Country/Region";
+                sai: Record Venue_Table;
             begin
-                if Conc.Get("Venue ") then
-                    if country1.get(Conc.Country) then
-                        Rec.Country := country1.Name;
+                if sai.Get("Venue ") then
+                    Rec.location := sai.Location;
             end;
+            // trigger OnValidate()
+            // var
+            //     Conc: Record Venue_Table;
+            //     country1: Record "Country/Region";
+            // begin
+            //     if Conc.Get("Venue ") then
+            //         if country1.get(Conc.Country) then
+            //             Rec.Country := country1.Name;
+            // end;
 
         }
 
@@ -68,8 +79,8 @@ table 50143 Concert_management
 
         field(30; "location"; Code[20])
         {
-            FieldClass = Flowfield;
-            CalcFormula = Lookup(Venue_Table.Location where(Venue_ID = field("Venue ")));
+            // FieldClass = Flowfield;
+            // CalcFormula = Lookup(Venue_Table.Location where(Venue_ID = field("Venue ")));
 
         }
 
