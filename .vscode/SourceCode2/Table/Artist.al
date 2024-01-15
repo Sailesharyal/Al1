@@ -29,6 +29,11 @@ table 50141 Artist
             OptionMembers = "",Male,Female,Gay;
         }
 
+        field(20; "Sailesh"; Text[250])
+        {
+            DataClassification = ToBeClassified;
+        }
+
 
 
     }

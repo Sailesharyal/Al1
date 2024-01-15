@@ -18,23 +18,15 @@ table 50143 Concert_management
             DataClassification = ToBeClassified;
             TableRelation = Venue_Table;
 
-
             trigger OnValidate()
             var
-                sai: Record Venue_Table;
+                Conc: Record Venue_Table;
+                country1: Record "Country/Region";
             begin
-                if sai.Get("Venue ") then
-                    Rec.location := sai.Location;
+                if Conc.Get("Venue ") then
+                    if country1.get(Conc.Country) then
+                        Rec.Country := country1.Name;
             end;
-            // trigger OnValidate()
-            // var
-            //     Conc: Record Venue_Table;
-            //     country1: Record "Country/Region";
-            // begin
-            //     if Conc.Get("Venue ") then
-            //         if country1.get(Conc.Country) then
-            //             Rec.Country := country1.Name;
-            // end;
 
         }
 

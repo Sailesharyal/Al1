@@ -122,6 +122,27 @@ page 50143 "Concertlistpage"
 
 
             }
+            action(Change_location)
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    loc: Record Concert_management;
+                begin
+                    loc.Reset();
+                    loc.SetFilter(Manager_name, 'Sandip Thapa');
+                    if Loc.FindFirst() then
+                        repeat
+                            loc.location := 'Pokhara';
+                            loc.Modify();
+                        until
+                        loc.Next() = 0;
+
+                end;
+            }
         }
+
     }
+
 }
