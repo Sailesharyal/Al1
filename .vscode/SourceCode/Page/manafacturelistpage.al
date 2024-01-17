@@ -43,7 +43,8 @@ page 50101 "manfacturelistpage"
 
                 trigger OnAction()
                 begin
-
+                    Error('There is some error in the page %1', Rec.Manafacture_ID);
+                    Message('hi, how are guys. i am fine here i hope you');
                 end;
             }
         }
