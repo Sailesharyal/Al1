@@ -31,6 +31,10 @@ table 50101 "Manafacture_Table"
 
 
     }
+    trigger OnDelete()
+    begin
+        Message('Plz dont delete yrr');
+    end;
 
     keys
     {
