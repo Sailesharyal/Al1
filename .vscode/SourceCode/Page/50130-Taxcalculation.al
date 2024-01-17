@@ -38,17 +38,17 @@ page 50136 "Taccalculationpage"
                         Message('Your Tax is less than 5% and Your TAX Amout is %1', Tax);
                     end
                     else
-                        if Rec.Salary >= 10000 and Rec.Salary <= 50000 then begin
+                        if (Rec.Salary >= 10000) and (Rec.Salary <= 50000) then begin
 
                             Tax := (10 * Rec.Salary) / 100;
-                            Message('Your Tax is less than 10% and Tax Amount is %1', Tax);
+                            Message('Your Tax is less than 10% and your salary is %1. so please pay %2', Rec.Salary, Tax);
                         end
                         else
                             Tax := (15 * Rec.Salary) / 100;
                     Message('Your Tax is less than 10% and your Tax Amount is %1', Tax);
 
                 end;
-                end;
+
             }
         }
     }
