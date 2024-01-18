@@ -50,6 +50,22 @@ page 50136 "Taccalculationpage"
                 end;
 
             }
+
+            group(newactionbutton)
+            {
+                action(tax2)
+                {
+                    trigger OnAction()
+                    begin
+
+                        Rec.Salary := Rec.Salary + 5000;
+                        message('your message is %1', Rec.Salary);
+
+                    end;
+                }
+            }
+
+
         }
     }
 }
