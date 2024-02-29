@@ -71,8 +71,8 @@ table 50143 Concert_management
 
         field(30; "location"; Code[20])
         {
-            // FieldClass = Flowfield;
-            // CalcFormula = Lookup(Venue_Table.Location where(Venue_ID = field("Venue ")));
+             FieldClass = Flowfield;
+             CalcFormula = Lookup(Venue_Table.Location where(Venue_ID = field("Venue ")));
 
         }
 

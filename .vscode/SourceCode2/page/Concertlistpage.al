@@ -131,10 +131,10 @@ page 50143 "Concertlistpage"
                     loc: Record Concert_management;
                 begin
                     loc.Reset();
-                    loc.SetFilter(Manager_name, 'Sandip Thapa' );
+                    loc.SetFilter(Manager_name, 'Sandip Thapa');
                     if Loc.FindFirst() then
                         repeat
-                            loc.location := 'Pokhara';
+                            loc.location := 'Bihar';
                             loc.Modify();
                         until
                         loc.Next() = 0;
